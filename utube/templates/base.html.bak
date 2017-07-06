@@ -1,0 +1,254 @@
+{% load static %}
+
+{# HTML5 declaration #}
+<!DOCTYPE html>
+<html>
+    {# Make modifiable head elements #}
+    <head>
+        <title>{% block title %} Home {% endblock title %} | UTube</title>
+        {% block head_favicon %}
+            <link rel="icon" type="image/png"
+                  href="{% static 'tube2/images/favicon.ico' %}">
+        {% endblock head_favicon %}
+        {% block head_meta %}
+            {% block head_meta_charset %}
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=utf-8" />
+            {% endblock head_meta_charset %}
+            {% block head_meta_contentlanguage %}
+                <meta http-equiv="Content-Language" value="en-US" />
+            {% endblock head_meta_contentlanguage %}
+            {% block head_meta_viewport %}
+                <meta name="viewport"
+                      content="width=device-width, initial-scale=1.0">
+            {% endblock head_meta_viewport %}
+        {% endblock head_meta %}
+        {% block head_css %}
+            {% block head_css_site %}
+                <link href="{% static 'tube2/css/bootstrap.min.css' %}"
+                      rel="stylesheet" media="screen">
+                <!--<link href="{% static 'tube2/css/app.css' %}"
+                      rel="stylesheet" media="screen">-->
+            {% endblock head_css_site %}
+            {% block head_css_section %}{% endblock head_css_section %}
+            {% block head_css_page %}{% endblock head_css_page %}
+        {% endblock head_css %}
+    </head>
+<body>
+    {# Navigation Menu #}
+    <header>
+		<br/>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-2 col-sm-2 col-lg-2">
+					<a class="" href="#">
+					<img src="{% static 'tube2/images/logo1.png' %}" alt="logo" />
+					</a>
+				</div>
+				
+				<div class="col-md-6 col-sm-6 col-lg-6">
+					<div class="top-search">
+						<form class="">
+							<input type="text" class="form-control" placeholder="Search...">
+						</form>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-right">  
+                            <li><a href="#" class="p-r-none">Subscribe</a></li><span class=""></span>
+							<span class=""></span><li><a href="#">Login</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>   
+            
+    </header>
+
+	
+
+
+	<link rel="stylesheet" href="{% static 'tube2/css/style.css' %}" type="text/css">
+
+
+	<div id="header">
+		<div>
+			<a href="index.html" id="logo"><img src="{% static 'tube2/images/logo.png' %}" alt=""></a>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="movies.html">Movies</a>
+					<ul>
+						<li>
+							<a href="#">Now Showing</a>
+						</li>
+						<li>
+							<a href="#">Comming Soon</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="ticket-info.html">Ticket Info</a>
+				</li>
+				<li class="selected">
+					<a href="rentals.html">Rentals</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="blog.html">Blog</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body" class="rentals">
+		<h2>Rentals</h2>
+		<ul>
+			<li>
+				<a href="#"><img src="{% static 'tube2/images/conference2.jpg' %}" alt=""></a>
+				<h4>Conference Rooms</h4>
+				<p>
+					In sed nibh mauris. Curabitur scelerisque dignissim viverra. Etiam interdum enim nec turpis.
+				</p>
+				<h4>Inclusions:</h4>
+				<span>1 long wooden table</span> <span>10 cushioned office chairs</span> <span>1 round of coffee with pastry per person</span>
+				<h4>Rates:</h4>
+				<span>$100 per 3 hours</span> <span>$25 per succeeding hour</span>
+			</li>
+			<li>
+				<a href="#"><img src="{% static 'tube2/images/cinema3.jpg' %}" alt=""></a>
+				<h4>Conference Rooms</h4>
+				<p>
+					Donec odio nunc, consectetur fringilla tincidunt nec, cursus vitae ipsum.
+				</p>
+				<h4>Inclusions:</h4>
+				<span>Theatre with up to 300 seating</span> <span>Projector</span> <span>Surround sound system</span>
+				<h4>Rates:</h4>
+				z <span>$500 for 3 hours</span> <span>$200 per succeeding hour</span>
+			</li>
+			<li>
+				<a href="#"><img src="{% static 'tube2/images/playing-chess.jpg' %}" alt=""></a>
+				<h4>Birthday Parties</h4>
+				<p>
+					In sed nibh mauris. Curabitur scelerisque dignissim viverra. Etiam interdum enim nec turpis.
+				</p>
+				<h4>Inclusions:</h4>
+				<span>50 seats and 5 round tables</span> <span>Sound system</span> <span>DJ</span> <span>Decorations</span>
+				<h4>Rates:</h4>
+				<span>$100 per 3 hours</span> <span>$25 per succeeding hour</span>
+			</li>
+			<li>
+				<a href="#"><img src="{% static 'tube2/images/ballet-dancer3.jpg' %}" alt=""></a>
+				<h4>Plays</h4>
+				<p>
+					Donec odio nunc, consectetur fringilla tincidunt nec, cursus vitae ipsum.
+				</p>
+				<h4>Inclusions:</h4>
+				<span>Theatre with up to 300 seating</span> <span>Projector</span> <span>Surround sound system</span>
+				<h4>Rates:</h4>
+				<span>$500 for 3 hours</span> <span>$200 per succeeding hour</span>
+			</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div>
+			<div>
+				<span>Quick Links</span>
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="ticket-info.html">Ticket Info</a>
+					</li>
+					<li>
+						<a href="#">Location</a>
+					</li>
+					<li>
+						<a href="movies.html">Now Showing</a>
+					</li>
+					<li>
+						<a href="rentals.html">Rentals</a>
+					</li>
+					<li>
+						<a href="about.html">Contact</a>
+					</li>
+					<li>
+						<a href="movies.html">Comming Soon</a>
+					</li>
+					<li>
+						<a href="about.html">The Company</a>
+					</li>
+					<li>
+						<a href="blog.html">Blog</a>
+					</li>
+				</ul>
+			</div>
+			<div class="section">
+				<span>Recent Tweets</span>
+				<ul>
+					<li>
+						<p>
+							Sed id mattis tellus. Proin egestas velit vel neque placerat sed interdum neque porta.
+						</p>
+						<span><a href="#">- 1 day ago</a></span>
+					</li>
+					<li>
+						<p>
+							Praesent at urna ac urna congue convallis.
+						</p>
+						<span><a href="#">- 2 day ago</a></span>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<span>Sign Up For Our Mailing List</span>
+				<p>
+					Praesent at urna ac urna congue convallis. Maecenas sed placerat turpis. Duis in dolor ut nibh molestie faucibus.
+				</p>
+				<form action="index.html">
+					<input type="text" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Email Address Here':this.value;" value="Enter Email Address Here">
+					<input type="submit" value="">
+				</form>
+			</div>
+			<p>
+				&#169; 2023 Cinema Theatre
+			</p>
+			<div class="connect">
+				<span>Stay Connected:</span> <a href="http://freewebsitetemplates.com/go/facebook/" id="facebook">facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a> <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a>
+			</div>
+		</div>
+	</div>
+
+    {# The Document Body #}
+    <div id="site-wrapper">
+        {% block content %}
+            if you see this, something is wrong!
+        {% endblock content %}
+    </div>
+    {# The Footer #}
+    <div class="footer">
+        <div class="container">
+            <p>Copyright LIVEpro Software Solutions</p>
+        </div>
+    </div>
+</body>
+{# Set of blocks that can be used to display JavaScript files #}
+    {% block footer_javascript %}
+        {% block footer_javascript_site %}
+            <script src="{% static 'tube2/js/jquery.min.js' %}"></script>
+            <script src="{% static 'tube2/js/bootstrap.min.js' %}"></script>
+			<!--<script src="{% static 'tube2/js/app.js' %}"></script>-->
+        {% endblock footer_javascript_site %}
+        {% block footer_javascript_section %}{% endblock footer_javascript_section %}
+        {% block footer_javascript_page %}{% endblock footer_javascript_page %}
+    {% endblock footer_javascript %}
+
+	
